@@ -20,14 +20,15 @@ void secant(double (*f)(double), double x0, double x1, int n){
 }
 
 double f(double x){
-        return pow(x, 2) - 7;
+        double pi = 3.14159265358979323846;
+        return (pi*pow(x, 2))*((3*7.28-x)/3) - 645.67;
     }
 
 int main(int argc, char *argv[]){
 
-    double x0 = 2.10146;
-    double x1 = 3.00242;
-    int n = 6;
+    double x0 = 2.31;
+    double x1 = 12.48;
+    int n = 5;
 
     secant(f , x0, x1, n);
 }

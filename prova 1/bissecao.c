@@ -72,26 +72,26 @@ int main(int argc, char *argv[]){
     int n = 12;
 */
 
-    double f(double h){
+/* double f(double h){
         //double e = 2.71828182845904523530287; // euler
         double pi = 3.14159265358979323846;
         return (pi*pow(h, 2))*((3*7.28-h)/3) - 645.67;
     }
     double a = 0;
     double b = 14.56;
-    int n = 12;
+    int n = 12; */
 
-    /*double r = 7.65;
-    double f(double h){
+/*     double f(double h){
         //double e = 2.71828182845904523530287; // euler
         double pi = 3.14159265358979323846;
+        double r = 8.71;
         double vs = (4*pi*pow(r, 3))/3;
-        double v = vs - ((261.9*vs)/1000);
+        double v = vs - ((737.18*vs)/1000);
         return ((pi*pow(h,2))/3) * (3*r-h) - v;
     }
     double a = 0;
-    double b = 2*r;
-    int n = 15;*/
+    double b = 17.42;
+    int n = 12; */
 
     /*double f(double l){
         double e = 2.71828182845904523530287; // euler
@@ -103,6 +103,7 @@ int main(int argc, char *argv[]){
     double a = 0.1;
     double b = 1;
     int n = 15;*/
+
     /*double r = 1.04;
     double f(double h){
         //double e = 2.71828182845904523530287; // euler
@@ -176,33 +177,49 @@ int main(int argc, char *argv[]){
     int n = 15;
  */
 
-/*     double r = 4.01;
-    double f(double h){
+
+/*     double f(double h){
         //double e = 2.71828182845904523530287; // euler
         double pi = 3.141592653589793238462643;
-        double l = 1.52;        
-        double v = 31.6;
-
+        double l = 5.51;        
+        double v = 49.67;
+        double r = 3.29;
         return l*(0.5*pi*pow(r,2) - pow(r,2)*asin(h/r) - h*sqrt(pow(r,2)-pow(h,2))) - v;
     }
     //colocar r - h lá em cima
     double a = 0;
-    double b = r;
-    int n = 15; */
-/*
-    double f(double w){
+    double b = 3.29;
+    int n = 12; */
+
+/*     double f(double w){
         //double e = 2.71828182845904523530287; // euler
         //double pi = 3.141592653589793238462643;
         double g = 9.81;       
-        double t = 1;
-        double xt = 4.04;
-
+        double t = 1.47;
+        double xt = 3.97;
         return -((g/(2*pow(w,2)))*(sinh(w*t) - sin(w*t))) - xt;
+    } */
+
+/*    double f(double x){
+        return 168.6972-110.72*x+12*pow(x,2);
+    } 
+    double a = 0;
+    double b = 4.53;
+    int n = 12; */
+
+    double f(double t){
+        
+        double e = 2.71828182846; // euler
+        double n = 148337521;
+        double l = -1.41* e -10;
+        double x = 37084380.25;
+        double t;
+        return x = (n+1) / (1 + n*(exp(l*(n+1)*t)));
     }
 
-    double a = -4.53;
-    double b = -0.35;
-    int n = 15;
-*/
+    double a = 0;
+    double b = 1800;
+    int n = 12;
+
     bisection(f, a, b, n);
 }

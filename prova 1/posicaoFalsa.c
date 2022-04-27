@@ -34,19 +34,19 @@ void false_position(double (*f)(double), double a, double b, int n, double tol){
     }
 }
 
-double f(double x){
-        double a = 2.93*x + pow(x,2)/2;
-        double b = 2.93 + x;
-        double q = 196.01;
-        double pi = 3.14159265358979323846;
-        return (pi*pow(x, 2))*((3*7.28-x)/3) - 645.67;
+double f(double t){
+        double e = 2.71828182845904523530287; // euler
+        double n = 148337521;
+        double l = 1.41*pow(10,-10);
+        double x = 37084380.25;
+        return x = (n+1) / 1 + n*e - 1*(n+1)*t;
 }
 
 int main(){
 
     double a = 0;
-    double b = 14.56;
-    int max_iter = 11;
+    double b = 1800;
+    int max_iter = 7;
     double tol = 0.00001;
 
     false_position(f, a, b, max_iter, tol);

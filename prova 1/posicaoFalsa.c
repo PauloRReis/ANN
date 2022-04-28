@@ -35,17 +35,17 @@ void false_position(double (*f)(double), double a, double b, int n, double tol){
 }
 
 double f(double t){
-        double e = 2.71828182845904523530287; // euler
-        double n = 148337521;
-        double l = 1.41*pow(10,-10);
-        double x = 37084380.25;
-        return x = (n+1) / 1 + n*e - 1*(n+1)*t;
+        double e = 2.71828182846; // euler
+        double n = 103481111;
+        double lambda = 1.41*1 / pow(10,10);
+        double x = (n * 25)/ 100;
+        return ( (n+1) / (1 + n * (1/exp(lambda*(n+1)*t ))) ) - x;
 }
 
 int main(){
 
     double a = 0;
-    double b = 1800;
+    double b = 2530;
     int max_iter = 7;
     double tol = 0.00001;
 

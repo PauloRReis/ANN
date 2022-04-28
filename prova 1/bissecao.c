@@ -3,6 +3,7 @@
 
 void bisection(double (*f)(double), double a, double b, int n){
     double fa = f(a);
+    double fb = f(b);
     if(fa * f(b) >= 0){
         printf("Não sei dizer que f possui raiz no intervalo raiz no intervalo [%f, %f]", a, b);
         return;
@@ -208,17 +209,15 @@ int main(int argc, char *argv[]){
     int n = 12; */
 
     double f(double t){
-        
         double e = 2.71828182846; // euler
-        double n = 148337521;
-        double l = -1.41* e -10;
-        double x = 37084380.25;
-        double t;
-        return x = (n+1) / (1 + n*(exp(l*(n+1)*t)));
+        double n = 103481111;
+        double lambda = 1.41*1 / pow(10,10);
+        double x = (n * 25)/ 100;
+        return ( (n+1) / (1 + n * (1/exp(lambda*(n+1)*t ))) ) - x;
     }
 
     double a = 0;
-    double b = 1800;
+    double b = 2530;
     int n = 12;
 
     bisection(f, a, b, n);

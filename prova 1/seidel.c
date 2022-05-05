@@ -31,13 +31,13 @@ int main(){
     */
 
    //ordem do sistema
-    int rows = 3;
+    int rows = 4;
     //estimativa inicial para solução do sistema
-    double chute[3] = {4.23793, 3.35832, 4.9764};
+    double chute[4] = {2.66, 4.35, 4.14, -0.87};
     //matriz estendida do sistema linear
-    double matrix[3][4] = {{3.62382, 1.04167, 1.55212, 0.98612}, {-3.08151, -8.37228, -4.26073, 0.32161}, {-2.31705, 0.69484, -4.04192, -1.66764}};
+    double matrix[4][5] = {{-16.34, -4.84, 4.82, -4.93, -2.07 }, {3.84, 11.14,-1.49, 4.06, 3.23}, {1.38, -3.2, -9.09, -2.76, 0.43}, {-0.67, -3.48, 3.44, -9.34, -0.54}};
     //numero máximo de iterações
-    int max_iter = 20;
+    int max_iter = 16;
 
     seidel(chute, rows, matrix, max_iter);
 }

@@ -1,7 +1,7 @@
 #include<stdio.h>
 
-#define ROWS 4
-#define COLS 5
+#define ROWS 2
+#define COLS 3
 
 void print_matriz(double m[ROWS][COLS]){
     for(int i=0; i<ROWS; i++){
@@ -43,7 +43,7 @@ void gauss(double m[ROWS][COLS]){
 
 int main(int argc, char *argv[]){
     
-    double m[ROWS][COLS] = {{1,2,3,1,2}, {1,5,3,1,4}, {2,4,-1,1,2}, {4,3,1,2,5}};
+    double m[ROWS][COLS] = {{1/3,-7/9}, {2/3,-2} , {8/9,-1/4}};
     print_matriz(m);
     gauss(m);
     

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<math.h>
 
 void seidel(double *chute, int rows, double matrix[rows][rows+1], int n){
     for(int i=0; i<n; i++){
@@ -41,3 +42,25 @@ int main(){
 
     seidel(chute, rows, matrix, max_iter);
 }
+
+/* double pi = 3.141592653589793238462643;
+    double g = 9.81, k = 36 * pi/180,
+            mi1 = 0.27, mi2 = 0.41, mi3 = 0.48,
+            m1 = 135, m2 = 124, m3 = 121,
+            r1 = (m1 * g * sin(k)) - (mi1 * m1 * g * cos(k)),
+            r2 = (m2 * g * sin(k)) - (mi2 * m2 * g * cos(k)),
+            r3 = (m3 * g * sin(k)) - (mi3 * m3 * g * cos(k));
+
+    printf("%.16f,   %.16f,   %.16f", r1, r2, r3);
+
+    // Seidel input
+    double a[ROWS][COLS] = {{m1, 1, 0},
+                            {m2, -1, 1},
+                            {m3, 0, -1}
+    };
+
+    double b[ROWS] = {r1, r2, r3};
+
+    double chute[COLS] = {5, 148, 127};
+
+    int n = 500; */

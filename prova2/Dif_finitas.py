@@ -29,16 +29,16 @@ def dif_fin(coeffs, y):
 if __name__ == '__main__':
     #exemplo1
     def f(x):
-        return math.exp(-x**2)+math.cos(x)+3
-    x0 = 4.118
-    k = 5 # ordem
-    n = 15 # número de pontos
+        return 3 * math.cos((x**2-1)**(1/3))
+    x0 = 8.31
+    k = 3 # ordem
+    n = 5 # número de pontos
 
     # queremos pontos no intervalo [x0-e, x0+e]
     e = 0.1 # tolerancias
     # x = np.linspace(x0 - e, x0 + e, n)
-    x = [3.8941, 3.9293, 3.936, 3.9733, 4.004, 4.0609, 4.0781, 4.122, 4.1658, 4.2006, 4.2346, 4.2499, 4.2768, 4.3239, 4.3358]
-    y = [f(xi) for xi in x]
+    x = [8.31]
+    y = [f(xi) for xi in x] 
 
     coeffs = coeffs_dif_fin(x0, x, k)
     aprox = dif_fin(coeffs, y)

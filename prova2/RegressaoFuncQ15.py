@@ -1,4 +1,3 @@
-from cmath import log
 import numpy as np
 import math
 
@@ -21,8 +20,8 @@ def best_line(x, y, grau=1):
     return np.linalg.solve(A, B)
 
 def poly(x, a, b):
-    return log(a) + b*log(x)
-    """ return (a*x**2)/(b+x**2) """
+    return a*x*np.e**(b*x)
+    # return a * (x/(x+b))
     # funcaomath.pow(x,b)
 
 def build_func(a, b):
@@ -31,9 +30,9 @@ def build_func(a, b):
     return temp
 
 if __name__ == '__main__':
-    x = [0.6348, 0.7236, 1.0439, 1.1935, 1.4824, 1.6238, 1.8083, 2.148, 2.3634, 2.5573, 2.7795, 2.9171]
-    y = [0.0099, 0.9475, 1.3522, 1.877, 4.3256, 6.8664, 9.4431, 18.7445, 27.7763, 37.2333, 50.4893, 61.236]
-    values = [1.2164, 1.4506, 2.8677]
+    x = [0.2034, 1.0188, 2.2526, 3.3779, 3.9195, 5.0354, 5.6825, 5.9303, 6.8442, 7.64, 8.7031, 9.8645]
+    y = [0.7077, 2.3585, 2.8706, 2.4071, 2.1101, 1.6317, 1.3035, 1.1857, 0.9587, 0.8383, 0.4367, 0.2987]
+    values = [0.6354, 1.2682, 1.6868]
     if min(y) <= 0:
         k1 = abs(min(y)) + 1
     else:
@@ -46,23 +45,24 @@ if __name__ == '__main__':
 
     yt = [yi + k1 for yi in y]
 
-    y_ = (np.divide(1,y))
+    y_ = np.log(np.divide(y,x))
 
     xt = [xi + k2 for xi in x]
 
-    x_ = np.divide(1,(np.power(x,2)))
+    x_ = x
     grau = 1
 
     a0, a1 = best_line(x_, y_, grau)
 
-    a = 1/a0
+    a = np.exp(a0)
 
-    b = a1*a
+    b = a1
+
     print('Coeficientes da reta')
-    print(f'{a0 } e {a1}')
+    print(f'{a0} e {a1}')
 
     print('Coeficientes')
-    print(f'{a} e {b }')
+    print(f'{a} e {b}')
 
     p = build_func(a, b)
 
@@ -70,7 +70,7 @@ if __name__ == '__main__':
         return p(x+k2) - k1
 
     px = [p(vi) for vi in values]
-    print(f'{px }')
+    print(f'{px}')
 
 """     # visualização
 

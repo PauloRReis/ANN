@@ -14,21 +14,20 @@ def richardson(col_1):
 if __name__ == '__main__':
     #exemplo 1
     def func(x):
-        return x**x**-x
+        return np.cos(x)**3 + 2*np.cos(x)**2 + 1
+        """return x**x**-x """
         """ return x**2 * np.tan(np.sin(x/np.pi)) """
 
-    x0 = 1.09284
+    x0 = -0.1676
     h = 0.28258
-    err_order = 8
+    err_order = 3
 
     def F1(h):
         return (func(x0 + h) - func(x0)) / h
 
-    hs = [h, h/2, h/4, h/8]
+    hs = [h, h/2, h/4]
     col_F1 = [F1(h/2**i) for i in range(err_order)]
 
     approx = richardson(col_F1)
 
     print(f'Aproximação = {approx}')
-
-    richardson(col_F1)

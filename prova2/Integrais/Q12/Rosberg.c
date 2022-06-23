@@ -32,10 +32,7 @@ void romberg(double array[]){
 
 
 double f(double x){
-    double g = 9.81;
-    double m = 65.93;
-    double cd = 0.21;
-    return sqrt((g*m) / cd) * tanh(sqrt((g*cd) / m) * x);
+    return (9 + 4*pow(cos(0.45*x), 2))*(5*exp(-0.5*x) + 2*exp(0.14*x));
 }
 
 int main(){
@@ -44,9 +41,9 @@ int main(){
     //aprox a integral de exp(-x*x), de 0 a 1
 
 
-    double a = 0;
-    double b =  5.59;
-    double h =  5.59;
+    double a = 1.67;
+    double b = 8.42;
+    double h = (b - a);
     int n = 10;
 
 

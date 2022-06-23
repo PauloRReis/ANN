@@ -32,10 +32,7 @@ void romberg(double array[]){
 
 
 double f(double x){
-    double g = 9.81;
-    double m = 65.93;
-    double cd = 0.21;
-    return sqrt((g*m) / cd) * tanh(sqrt((g*cd) / m) * x);
+    return -x*(x-21)*(x+1);
 }
 
 int main(){
@@ -45,8 +42,8 @@ int main(){
 
 
     double a = 0;
-    double b =  5.59;
-    double h =  5.59;
+    double b = 12;
+    double h = 12;
     int n = 10;
 
 

@@ -13,7 +13,6 @@ def heun(f,x0,y0,h,n):
         r.append((x0,y0))
     return r
 
-#Q9 Prova:
 def f(x,y):
     return y*(2-x)+x+1
 

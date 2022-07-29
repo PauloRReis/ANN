@@ -13,11 +13,11 @@ def ralston(f, x0, y0, h,n):
 def f(x,y):
     return y*(2-x)+x+1
 
-n = 10
-h = 0.185 
+n = 150
+h = 0.0511 
 
-x0, y0 = 1.656 , 2.685
+x0, y0 = 0 , 7.665
 
 e = ralston(f,x0,y0, h, n)
 for xi, yi in e:
-    print(xi, yi)
+    print(f'{yi},', end='')

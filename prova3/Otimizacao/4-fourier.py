@@ -1,3 +1,11 @@
+""" Encontre os coeficientes dos 11 primeiros termos da série de Fourier da função f(x)=xsin(6e−x2) no intervalo [−π,π], ou seja, encontre os coeficientes da função
+g(x)=c+∑n=15[ancos(nx)+bnsin(nx)]
+Para o cálculo dos coeficientes c, an e bn, use a regra de Simpson com n=128 subintervalos. Em seguida calcule g(x) para os seguintes valores de x
+x1=−2.291, x2=0.371 e x3=1.857.
+A função g(x) é uma aproximação para a função f(x) no intervalo [−π,π] com erro dado por
+erro=∫π−π[f(x)−g(x)]2dx.
+Use o método da quadratura gaussiana com 10 nós para determinar o erro. """
+
 from math import cos, sin, exp, pi, ceil
 
 a = -3.141592653589793

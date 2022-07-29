@@ -1,6 +1,3 @@
-import math
-import numpy as np
-#import matplotlib.pyplot as plt
 '''
 Seja Pn(x) o polinômio de Legendre de grau n. Encontre os coeficientes da combinação linear
 g(x)=∑i=112ciPi(x)
@@ -11,6 +8,9 @@ erro=∫1−1[f(x)−g(x)]2dx.
 Use o método da quadratura gaussiana com 10 nós para determinar o erro.
 '''
 
+import math
+import numpy as np
+#import matplotlib.pyplot as plt
 
 def trapz(f, a, b, n):
     h = abs(b - a) / n

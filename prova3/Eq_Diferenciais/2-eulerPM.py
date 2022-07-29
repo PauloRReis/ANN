@@ -1,3 +1,7 @@
+""" Considere o seguinte PVI
+y′=y(2−x)+x+1,y(x0)=y0,
+com x0=0.3492 e y0=0.75895. Use o método do ponto médio de Euler com tamanho do passo h=0.1148 para estimar o valor da solução exata desse PVI nos pontos xk=x0+kh, para k=1,2,…,10. """
+
 import numpy as np
 
 def true_euler(f, x0, y0, h, n):

@@ -1,3 +1,11 @@
+""" Seja Pn(x) o polinômio de Legendre de grau n. Encontre os coeficientes da combinação linear
+g(x)=∑i=116ciPi(x)
+que melhor se aproxima da função f(x)=tanh(3x)cos(3x) no intervalo [−1,1]. Para o cálculo dos coeficientes ci, use o método de Romberg com h=2/16 e erro da ordem de O(h8). Em seguida calcule g(x) para os seguintes valores de x
+x1=−0.883, x2=0.244 e x3=0.571.
+A função g(x) é uma aproximação para a função f(x) no intervalo [−1,1] com erro dado por
+erro=∫1−1[f(x)−g(x)]2dx.
+Use o método da quadratura gaussiana com 10 nós para determinar o erro.
+ """
 import math
 import numpy as np
 import matplotlib.pyplot as plt

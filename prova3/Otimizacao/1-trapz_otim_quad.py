@@ -1,9 +1,17 @@
+""" Sejam
+f1(x)=1, f2(x)=x, f3(x)=x2, f4(x)=x3, f5(x)=x4  e  f6(x)=x5
+Encontre os coeficientes da combinação linear
+g(x)=c1f1(x)+c2f2(x)+c3f3(x)+c4f4(x)+c5f5(x)+c6f6(x)
+que melhor se aproxima da função f(x)=2sin(x)+cos(−x2) no intervalo [a,b], com a=−0.9 e b=2.491. Para o cálculo dos coeficientes ci, use a regra dos trapézios com n=256 subintervalos. Em seguida calcule g(x) para os seguintes valores de x
+x1=−0.771, x2=1.056 e x3=1.597.
+A função g(x) é uma aproximação para a função f(x) no intervalo [−0.9,2.491] com erro dado por
+erro=∫2.491−0.9[f(x)−g(x)]2dx.
+Use o método da quadratura gaussiana com 10 nós para determinar o erro. """
+
 import numpy as np
 #import matplotlib.pyplot as plt
 
 #adicionar a, b, funcs, func, values = x1,x2,x3
-
-
 
 def trapz(f, a, b, n):
     h = abs(b - a) / n

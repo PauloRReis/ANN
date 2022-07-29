@@ -1,3 +1,13 @@
+""" Sejam
+f1(x)=2, f2(x)=x−1, f3(x)=x2+1, f4(x)=x3+x−3, f5(x)=12x4−3x2+1, f6(x)=x5−4x+2  e  f7(x)=x7−x
+Encontre os coeficientes da combinação linear
+g(x)=c1f1(x)+c2f2(x)+c3f3(x)+c4f4(x)+c5f5(x)+c6f6(x)+c7f7(x)
+que melhor se aproxima da função f(x)=x2cos(xsin(ln(1+x2))) no intervalo [a,b], com a=−2.059 e b=2.048. Para o cálculo dos coeficientes ci, use o método de Romberg com h=(b−a)/10 e erro da ordem de O(h8). Em seguida calcule g(x) para os seguintes valores de x
+x1=−1.096, x2=0.029 e x3=1.603.
+A função g(x) é uma aproximação para a função f(x) no intervalo [−2.059,2.048] com erro dado por
+erro=∫2.048−2.059[f(x)−g(x)]2dx.
+Use o método da quadratura gaussiana com 10 nós para determinar o erro. """
+
 import numpy as np
 
 def trapz(f, a, b, n):
